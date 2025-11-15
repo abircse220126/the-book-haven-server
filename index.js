@@ -32,6 +32,7 @@ async function run() {
     const bookCollection = db.collection("bookCollection")
 
     
+    
     app.get("/books" , async(req , res)=>{
         const cursor = bookCollection.find().limit(6)
         const result = await cursor.toArray()
@@ -46,7 +47,7 @@ async function run() {
     })
 
 
-    // find a single product using Id
+    // find a single books using Id
     app.get("/viewdetails/:id" , async(req,res)=>{
 
       const id = req.params.id;
@@ -93,7 +94,7 @@ async function run() {
           summary :updateUser.summary
         }
       }
-      const result=await bookCollection.updateOne(query , update)
+      const result= await bookCollection.updateOne(query , update)
       res.send(result)
     })
 
