@@ -13,7 +13,6 @@ const uri = "mongodb+srv://theBookHaven:bBth3Yyigga90cLf@cluster0.owrghg5.mongod
 // theBookHaven
 // bBth3Yyigga90cLf
 
-
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
